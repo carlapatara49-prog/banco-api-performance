@@ -1,5 +1,6 @@
 import http from 'k6/http';
 import { sleep, check } from 'k6';
+ import{pegarBaseUrl} from '../utils/variaveis.js'
 const postLogin = JSON.parse(open ('../fixture/postLogin.json'))
 
 export const options = {
@@ -19,7 +20,6 @@ export const options = {
 
 export default function () {
     //teste
-  
 
    check (resp, {
     'Validar que o status é 200': (r) => r.status === 200,
