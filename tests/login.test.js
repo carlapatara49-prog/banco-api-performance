@@ -19,17 +19,7 @@ export const options = {
 
 export default function () {
     //teste
-    const url = 'http://localhost:3000/login';
-    console.log(postLogin)
-    const payload = JSON.stringify(postLogin);
-
-  const params = {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  };
-
-   const resp = http.post(url, payload, params);
+  
 
    check (resp, {
     'Validar que o status é 200': (r) => r.status === 200,
